@@ -121,11 +121,11 @@
             <configuration>
               <executable>bash</executable>
               <commandlineArgs>
-                ${basedir}/copy_mvn_repo.sh
-                ${project.basedir}
+                /mnt/c/Users/lichu/Documents/GitHub/syndesis/app/s2i/copy_mvn_repo.sh
+                /mnt/c/Users/lichu/Documents/GitHub/syndesis/app/s2i
                 ${project.version}
-                ${basedir}/target/generated-sources/docker
-                ${maven.repo.local}
+                /mnt/c/Users/lichu/Documents/GitHub/syndesis/app/s2i/target/generated-sources/docker
+                /mnt/c/Users/lichu/.m2/repository
               </commandlineArgs>
             </configuration>
           </execution>

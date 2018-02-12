@@ -1,0 +1,122 @@
+{
+  "id": "box",
+  "name": "Box",
+  "description": "File uploading and Recieving from Box.com",
+  "icon": "fa-box",
+  "dependencies": [
+    {
+      "type": "MAVEN",
+      "id": "@project.groupId@:@project.artifactId@:@project.version@"
+    }
+  ],
+  "configuredProperties": {
+  },
+  "tags": [
+    "verifier"
+  ],
+  "properties": {
+    "username": {
+      "kind": "path",
+      "displayName": "User Name",
+      "group": "common",
+      "required": false,
+      "type": "string",
+      "javaType": "java.lang.String",
+      "deprecated": false,
+      "secret": false,
+      "description": "Box.com User Name"
+    },
+    "token": {
+      "kind": "path",
+      "displayName": "Token",
+      "group": "common",
+      "required": true,
+      "type": "string",
+      "javaType": "java.lang.String",
+      "deprecated": false,
+      "secret": false,
+      "description": "Token"
+    },
+    "directoryname": {
+      "kind": "path",
+      "displayName": "Box.com Directory",
+      "group": "common",
+      "required": false,
+      "type": "string",
+      "javaType": "java.lang.String",
+      "deprecated": false,
+      "secret": false,
+      "description": "Directory Name"
+    },
+    "password": {
+      "kind": "parameter",
+      "displayName": "Password",
+      "group": "common",
+      "required": false,
+      "type": "string",
+      "javaType": "java.lang.String",
+      "deprecated": false,
+      "secret": true,
+      "description": "Paasword"
+    },
+    "timeout": {
+      "kind": "parameter",
+      "displayName": "Time Out",
+      "group": "common",
+      "required": false,
+      "type": "integer",
+      "javaType": "java.lang.Integer",
+      "deprecated": false,
+      "secret": false,
+      "description": "Time Out"
+    }
+  },
+  "actions": [
+    {
+      "name": "upload",
+      "description": "Upload a file to Box.com",
+      "id": "io.syndesis:box-upload-connector",
+      "pattern": "To",
+      "actionType": "connector",
+      "descriptor": {
+        "componentScheme": "box",
+        "inputDataShape": {
+          "kind": "*"
+        },
+        "outputDataShape": {
+          "kind": "none"
+        },
+        "configuredProperties": {
+          "disconnect": "true"
+        },
+        "propertyDefinitionSteps": [
+          {
+          }
+        ]
+      }
+    },
+    {
+      "name": "download",
+      "description": "Download a file from Box.com",
+      "id": "io.syndesis:box-download-connector",
+      "pattern": "From",
+      "actionType": "connector",
+      "descriptor": {
+        "component-scheme": "box",
+        "inputDataShape": {
+          "kind": "none"
+        },
+        "outputDataShape": {
+          "kind": "*"
+        },
+        "configuredProperties": {
+          "disconnect": "true"
+        },
+        "propertyDefinitionSteps": [
+          {
+          }
+        ]
+      }
+    }
+  ]
+}

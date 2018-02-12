@@ -198,6 +198,24 @@
       <scope>runtime</scope>
     </dependency>
 
+    <dependency>
+      <groupId>io.syndesis</groupId>
+      <artifactId>ftp-connector</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.syndesis</groupId>
+      <artifactId>box-connector</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.syndesis</groupId>
+      <artifactId>dropbox-connector</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>    
      <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-salesforce</artifactId>

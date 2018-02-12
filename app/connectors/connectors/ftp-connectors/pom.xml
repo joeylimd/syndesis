@@ -16,32 +16,19 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <parent>
-    <groupId>io.syndesis</groupId>
-    <artifactId>syndesis-connectors-project</artifactId>
-    <version>1.2-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
-  <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.syndesis</groupId>
+        <artifactId>connectors</artifactId>
+        <version>1.2-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>connectors</artifactId>
-  <name>Connectors :: Parent</name>
-  <packaging>pom</packaging>
-
-  <modules>
-    <module>aws-s3-connector</module>
-    <module>http</module>
-    <module>timer</module>
-    <module>twitter-connector</module>
-    <module>salesforce</module>
-    <module>sql</module>
-    <module>rest</module>
-    <module>day-trade</module>
-    <module>trade-insight</module>
-    <module>jms</module>
-    <module>odata</module>
-    <module>box-connector</module>
-	<module>ftp-connectors</module>
-	<module>dropbox-connector</module>
-  </modules>
+    <artifactId>ftp-connectors</artifactId>
+    <name>Connectors :: FTP :: Parent</name>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>ftp-connector</module>
+    </modules>
 </project>
