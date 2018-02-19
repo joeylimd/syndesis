@@ -10,6 +10,9 @@
     }
   ],
   "configuredProperties": {
+    "tokenUrl": "https://api.dropboxapi.com/oauth2/token",
+	  "authorizationUrl": "https://www.dropbox.com/oauth2/authorize",
+	  "authenticationType": "oauth2"
   },
   "tags": [
     "verifier"
